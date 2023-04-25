@@ -1,0 +1,1 @@
+{"mappings":"ACAA,qBAIA","sources":["index.9eaf20ea.css","src/index.css"],"sourcesContent":[".hidden {\n  display: none;\n}\n\nbutton {\n  cursor: pointer;\n}\n\n/*# sourceMappingURL=index.9eaf20ea.css.map */\n",".hidden{\n    display: none;\n}\n\nbutton{\n    cursor: pointer;\n}"],"names":[],"version":3,"file":"index.9eaf20ea.css.map"}
