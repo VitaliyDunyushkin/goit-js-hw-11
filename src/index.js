@@ -61,7 +61,12 @@ async function getGallery(searchText) {
     const array = response.data.hits;
 
     console.log('data = ', array);
-    // console.log('test = ', data[1].webformatURL);
+    // console.log('webformatUR = ', array[1].webformatURL);
+    // console.log('tags = ', array[1].tags);
+    // console.log('likes = ', array[1].likes);
+    // console.log('views = ', array[1].views);
+    // console.log('comments = ', array[1].comments);
+    // console.log('downloads = ', array[1].downloads);
 
     const markup = array.reduce(
       (markup, { webformatURL, tags, likes, views, comments, downloads }) => {
@@ -95,20 +100,20 @@ async function getGallery(searchText) {
 
 function createMarkup(webformatURL, tags, likes, views, comments, downloads) {
   return `<div class="photo-card">
-      <img src="${webformatURL}" alt="${tags}" loading="lazy" />
+      <img src="${webformatURL}" alt="${tags}" width=300 height=200 loading="lazy" />
       <div class="info">
         <p class="info-item">
-          <b>${likes}</b>
+          <b>likes:<br>${likes}</b>
         </p>
         <p class="info-item">
-          <b>${views}</b>
+          <b>views:<br>${views}</b>
         </p>
         <p class="info-item">
-          <b>${comments}</b>
+          <b>comments:<br>${comments}</b>
         </p>
         <p class="info-item">
-          <b>${downloads}</b>
+          <b>downloads:<br>${downloads}</b>
         </p>
       </div>
-    </div>;`;
+    </div>`;
 }
